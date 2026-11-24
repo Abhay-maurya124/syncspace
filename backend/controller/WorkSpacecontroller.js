@@ -26,7 +26,6 @@ export const createworkspace = async (req, res) => {
         return res.status(500).json({ message: "Error creating workspace", error: error.message });
     }
 };
-
 export const addMember = async (req, res) => {
     try {
         const { workspaceId } = req.params;

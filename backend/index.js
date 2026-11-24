@@ -6,11 +6,9 @@ import {router} from "./router/AuthRouter.js";
 import {connectDB} from "./config/db.js";
 
 import { workspaceRouter } from "./router/WorkSpace.js";
-import dns from "node:dns";
 import cookieParser from "cookie-parser";
 import { documentRouter } from "./router/documentRouter.js";
 const app = express();
-dns.setDefaultResultOrder('ipv4first');
 app.use(express.json());
 app.use(cookieParser());
 app.use('/api/auth', router);
